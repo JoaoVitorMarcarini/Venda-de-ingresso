@@ -10,21 +10,12 @@ function comprar(){
 
     if(numeroDeIngressos >= quantidade){
         document.getElementById(`qtd-${tipoIngresso}`).textContent = numeroDeIngressos - quantidade
-    } else if (numeroDeIngressos == 0){
-        alert('ingressos para pista esgotados')   
-    } else{
-        alert('Quantidade de ingressos indisponivel para pista')
+    } else if (numeroDeIngressos == 0 && tipoIngresso == 'pista'){
+        alert(`ingressos para ${tipoIngresso} esgotados`)   
+    }else if(numeroDeIngressos == 0 && tipoIngresso != 'pista'){
+        alert(`ingressos para cadeira ${tipoIngresso} esgotados`) 
+    }else{
+        alert(`Quantidade de ingressos indisponivel`)
     }
 }
 
-function RetirandoIgressos(tipo, quantidade){
-    let numeroDeIngressos = document.getElementById(`qtd-${tipo}`).textContent
-
-    if(numeroDeIngressos >= quantidade){
-        document.getElementById(`qtd-${tipo}`).textContent = numeroDeIngressos - quantidade
-    } else if (numeroDeIngressos == 0){
-        alert('ingressos para pista esgotados')   
-    } else{
-        alert('Quantidade de ingressos indisponivel para pista')
-    }   
-}
