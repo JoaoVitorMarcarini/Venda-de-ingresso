@@ -10,12 +10,14 @@ function comprar(){
 
     if(numeroDeIngressos >= quantidade){
         document.getElementById(`qtd-${tipoIngresso}`).textContent = numeroDeIngressos - quantidade
-    } else if (numeroDeIngressos == 0 && tipoIngresso == 'pista'){
+    }else if (numeroDeIngressos == 0 && tipoIngresso == 'pista'){
         alert(`ingressos para ${tipoIngresso} esgotados`)   
     }else if(numeroDeIngressos == 0 && tipoIngresso != 'pista'){
         alert(`ingressos para cadeira ${tipoIngresso} esgotados`) 
     }else{
         alert(`Quantidade de ingressos indisponivel`)
     }
+    
+    document.getElementById('qtd').value = ""
 }
 
