@@ -9,6 +9,7 @@ function comprar(){
     let numeroDeIngressos = document.getElementById(`qtd-${tipoIngresso}`).textContent
 
     if(numeroDeIngressos >= quantidade){
+        alert('Compra realizada com sucesso!')
         document.getElementById(`qtd-${tipoIngresso}`).textContent = numeroDeIngressos - quantidade
     }else if (numeroDeIngressos == 0 && tipoIngresso == 'pista'){
         alert(`ingressos para ${tipoIngresso} esgotados`)   
